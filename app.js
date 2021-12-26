@@ -44,3 +44,45 @@ function changeSlide(direction) {
 height}px)`
 }
 
+function changeSlide1(direction) {
+    if (direction === 'up') {
+        activeSlideIndex++
+        if (activeSlideIndex === slideCount) {
+            activeSlideIndex = 0
+        }
+    }
+    if (direction === 'down') {
+        activeSlideIndex--
+        if (activeSlideIndex < 0) {
+            activeSlideIndex = slideCount - 1
+            console.log(activeSlideIndex)
+        }
+    }
+    const height = container.clientHeight
+    
+    mainSlide.style.transform = `translateY(-${activeSlideIndex*
+        height}px)`
+    sidebar.style.transform = `translateY( ${activeSlideIndex*
+height}px)`
+}
+function changeSlide2(direction) {
+    if (direction === 'up') {
+        activeSlideIndex++
+        if (activeSlideIndex === slideCount) {
+            activeSlideIndex = 0
+        }
+    }
+    if (direction === 'down') {
+        activeSlideIndex--
+        if (activeSlideIndex < 0) {
+            activeSlideIndex = slideCount - 1
+            console.log(activeSlideIndex)
+        }
+    }
+    const height = container.clientHeight
+    
+    mainSlide.style.transform = `translateY(-${activeSlideIndex*
+        height}px)`
+    sidebar.style.transform = `translateY( ${activeSlideIndex*
+height}px)`
+}
